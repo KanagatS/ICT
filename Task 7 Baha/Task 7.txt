@@ -1,0 +1,163 @@
+Exercise #1
+
+size = input("Size: ")
+add = input("Add pepperoni? (Yes/No) ")
+cheese = input("You want extra cheese? (Yes/No) ")
+
+bill = 0
+
+if size == "L":
+    bill += 25
+elif size == "M":
+    bill += 20
+else:
+    bill += 15
+
+if add == "Yes":
+    if size == "S":
+        bill += 2
+    else:
+        bill += 3
+
+if cheese == "Yes":
+    bill += 1
+
+print(f"Your final bill: {bill} $")
+
+
+==========================================================================================
+
+Exercise #2
+
+year = int(input("Enter year to check if it's leap: "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print(f"{year} is a leap year")
+        else:
+            print(f"{year} is not leap year")
+    else:
+        print(f"{year} is a leap year")
+else:
+    print(f"{year} is not leap year")
+
+
+==========================================================================================
+
+Exercise #3
+
+w = int(input("Enter your weight: "))
+h = float(input("Enter your height: "))
+
+BMI = round(w / (h ** 2))
+
+if BMI < 18.5:
+    print(f"Your BMI = {BMI}, you are underweight")
+elif 18.5 <= BMI < 25:
+    print(f"Your BMI = {BMI}, you have normal weight")
+elif 25 <= BMI < 30:
+    print(f"Your BMI = {BMI}, you are slightly overweight")
+elif 30 <= BMI < 35:
+    print(f"Your BMI = {BMI}, you are obese")
+else:
+    print(f"Your BMI = {BMI}, you are clinically obese")
+
+
+==========================================================================================
+
+Exercise #4
+
+salary = int(input("Enter ypur salary: "))
+year = int(input("Enter ypur year of service: "))
+
+if year > 5:
+    print(f"You will get bonus for {salary*0.05} $")
+else:
+    print("Unfortunately you won't recieve a bonus")
+
+
+==========================================================================================
+
+Exercise #5
+
+length, breadth = map(int, input("Enter length and breadth: ").split())
+
+if length == breadth:
+    print("It's square!")
+else:
+    print("It's not square!")
+
+
+==========================================================================================
+
+Exercise #6
+
+cost = int(input("Count of purchases: "))
+total = cost * 100
+
+if total >= 1000:
+    print(f"You'll get discount 10%, and total cost is {int(total - total * 0.1)} $")
+else:
+    print(f"You won't get discount, total cost is {total} $")
+
+
+==========================================================================================
+
+Exercise #7
+
+mark = int(input("Enter your total score: "))
+
+if mark < 25:
+    print("Your mark is F")
+elif 25 <= mark < 45:
+    print("Your mark is E")
+elif 45 <= mark < 50:
+    print("Your mark is D")
+elif 50 <= mark < 60:
+    print("Your mark is C")
+elif 60 <= mark < 80:
+    print("Your mark is B")
+else:
+    print("Your mark is A")
+
+
+==========================================================================================
+
+Exercise #8
+
+ages = list(map(int, input("Enter ages: ").split()))
+
+print(f"The oldest is {max(ages)} years old")
+print(f"The youngest is {min(ages)} years old")
+
+
+==========================================================================================
+
+Exercise #9
+
+total = int(input("Enter classes held: "))
+attented = int(input("Enter classes attended: "))
+
+percent = int(100 * attented / total)
+
+if percent >= 75:
+    print(f"You allowed to exams, you have {percent}% attendance")
+else:
+    print("You aren't allowed to exams, your attendance is less than 75%")
+
+
+==========================================================================================
+
+Exercise #10
+
+n = int(input("Enter number: "))
+
+if (n % 10) % 3 == 0:
+    print("Last digit is divisible to 3")
+else:
+    print("Last digit isn't divisible to 3")
+
+
+==========================================================================================
+

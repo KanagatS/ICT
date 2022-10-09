@@ -1,0 +1,170 @@
+Exercise 1 
+
+s = input().lower()
+vowels = ["a", "o", "y", "e", "u", "i"]
+
+# Removing all vowels from string
+for char in vowels:
+    s = s.replace(char, "")
+
+# Inserting dot before every consonant and print them
+for i in range(len(s)):
+    if s[i] not in vowels:
+        print("." + s[i], sep="", end="")
+
+
+==========================================================================================
+
+Exercise 2 
+
+s = input().split("+")
+print('+'.join(sorted(s)))
+
+
+==========================================================================================
+
+Exercise 3 
+
+print(input().capitalize())
+
+==========================================================================================
+
+Exercise 4 
+
+s = input()
+
+print("YES" if (s.find("0000000") != -1 or s.find("1111111")) != -1 else print("NO"))
+
+
+==========================================================================================
+
+Exercise 5 
+
+if len(set(input())) % 2 == 0:
+    print("CHAT WITH HER")
+else:
+    print("IGNORE HIM")
+
+
+==========================================================================================
+
+Exercise 6 
+
+s = input()
+upper, lower = 0, 0
+
+for i in range(len(s)):
+    if s[i].isupper():
+        upper += 1
+    else:
+        lower += 1
+
+print(s.lower() if lower >= upper else print s.upper())
+
+
+==========================================================================================
+
+Exercise 7 
+
+import string
+
+alphabet = string.ascii_lowercase
+
+n = int(input())
+s = input().lower()
+
+if len(set(s)) == len(alphabet):
+    print("YES")
+else:
+    print("NO")
+
+
+==========================================================================================
+
+Exercise 8 
+
+s = input()
+t = input()
+
+print("YES" if s == t[::-1] else print("NO"))
+
+
+==========================================================================================
+
+Exercise 9 
+
+n = int(input())
+s = input()
+
+Anton, Danik = s.count("A"), s.count("D")
+
+if Danik > Anton:
+    print("Danik")
+elif Anton > Danik:
+    print("Anton")
+else:
+    print("Friendship")
+
+
+==========================================================================================
+
+Exercise 10 
+
+s = input()
+
+if s[0].islower() or s == s.lower():
+    print(s.lower().capitalize())
+else:
+    print(s)
+
+
+==========================================================================================
+
+Exercise 11 
+
+N = int(input())
+s = input()
+
+z = s.count("z")
+e = s.count("e")
+r = s.count("r")
+o = s.count("o")
+n = s.count("n")
+
+while True:
+    if o > 0 and n > 0 and e > 0:
+        print(1, end=" ")
+        o -= 1
+        n -= 1
+        e -= 1
+    else:
+        break
+
+while True:
+    if z > 0 and e > 0 and r > 0 and o > 0:
+        print(0, end=" ")
+        z -= 1
+        e -= 1
+        r -= 1
+        o -= 1
+    else:
+        break
+
+
+==========================================================================================
+
+Exercise 12 
+
+n = int(input())
+s = input()
+cnt = 0
+
+while s.find("xxx") != -1:
+    s = s.replace("x", "", 1)
+    cnt += 1
+
+print(cnt)
+
+
+==========================================================================================
+

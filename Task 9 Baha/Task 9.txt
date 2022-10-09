@@ -1,0 +1,76 @@
+Exercise #1
+
+nums = [int(i) for i in input().split()]
+count = 0
+
+for i in range(len(nums)):
+    for j in range(i + 1, len(nums)):
+        if nums[i] == nums[j]:
+            count += 1
+
+print(count)
+
+==========================================================================================
+
+Exercise #2
+
+nums = [int(i) for i in input().split()]
+cnt = 0
+
+for i in range(len(nums)):
+    for j in range(len(nums)):
+        if i != j and nums[i] > nums[j]:
+            cnt += 1
+    print(cnt, end=" ")
+    cnt = 0
+
+==========================================================================================
+
+Exercise #3
+
+nums = [int(i) for i in input().split()]
+cnt = len(nums) // 2
+
+for num in nums:
+    if nums.count(num) == cnt:
+        print(num)
+        break
+
+==========================================================================================
+
+Exercise #4
+
+nums = [int(i) for i in input().split()]
+sm = 0
+
+for num in nums:
+    if nums.count(num) == 1:
+        sm += num
+
+print(sm)
+
+==========================================================================================
+
+Exercise #5
+
+nums = [int(i) for i in input().split()]
+
+# We'll use dictionary to calculate count of every number
+d, t = {}, {}
+for num in nums:
+    if num not in d:
+        d[num] = 1
+    else:
+        d[num] += 1
+
+for v in d.values():
+    if v in t:
+        print("False")
+        break
+    t[v] = 1
+
+else:
+    print("True")
+
+==========================================================================================
+

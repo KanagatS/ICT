@@ -1,0 +1,112 @@
+# Exercise 1: Bottle Deposits
+
+containers = list(map(int, input().split()))
+jurisdiction = 0
+
+for elem in range(len(containers)):
+    if containers[elem] <= 1:
+        jurisdiction += 0.1
+    elif containers[elem] > 1:
+        jurisdiction += 0.25
+
+print(f"Total jurisdiction = {jurisdiction} $")
+
+
+-----------------------------------------------------------------
+
+# Exercise 2: Tax and Tip
+
+cost = int(input("Cost: "))
+tip, tax = cost * 0.18, cost * 0.3
+print(f"Tip will be {round(tip, 2)} tenge \nTax will be {round(tax, 2)} tenge")
+print(f"Total amount is {round(cost+tip+tax,2)} tenge")
+
+
+-----------------------------------------------------------------
+
+# Exercise 3: Sum of the First n Positive Integers
+
+n = int(input())
+sm = ((n * (n - 1)) / 2) + n
+print(f"Sum elements between 1 and N: {int(sm)}")
+
+
+-----------------------------------------------------------------
+
+# Exercise 4: Widgets and Gizmos
+
+widget, gizmo = map(int, input("Enter widget and gizmo counts: ").split())
+overall = widget * 75 + gizmo * 112
+print(f"Total weight = {overall} g")
+
+
+-----------------------------------------------------------------
+
+# Exercise 5: Compound Interest
+
+money = int(input("How much money do you want to put in bank: "))
+print(f"After first year you'll have {round(money * 1.04, 2)}")
+print(f"After second year you'll have {round(money * 1.0816, 2)}")
+print(f"After third year you'll have {round(money * 1.124864, 2)}")
+
+-----------------------------------------------------------------
+
+# Exercise 6: Celsius to Fahrenheit and Kelvin
+
+c = int(input("Enter temperature in Celcius: "))
+print(f"{c} C = {c*9/5+32} F")
+print(f"{c} C = {c+273} K")
+
+
+-----------------------------------------------------------------
+
+# Exercise 7: Wind Chill
+
+t, v = map(int, input("Temperature and Velocity: ").split())
+
+if t <= 10 and v > 4.8:
+    WCI = 13.12 + 0.6215 * t - 11.37 * (v ** 0.16) + 0.3965 * t * (v ** 0.16)
+    print("WCI =", int(WCI), sep=" ")
+else:
+    print("Input is not correct")
+
+
+-----------------------------------------------------------------
+
+# Exercise 8: Body Mass Index
+
+h, w = map(int, input("Enter height and weight in cm and kilo: "))
+BMI = w / (h ** 2)
+print(f"BMI = {BMI}")
+
+
+-----------------------------------------------------------------
+
+# Exercise 9: Units of Time
+
+d = int(input("Day: "))
+h = int(input("Hours: "))
+m = int(input("Minutes: "))
+s = int(input("Seconds: "))
+
+total = s + (m * 60) + (h * 3600) + (d * 24 * 60 * 60)
+
+print("Total time in seconds:", int(total), "sec", sep=" ")
+
+-----------------------------------------------------------------
+
+# Exercise 10: Units of Time (Again)
+
+t = int(input("Seconds: "))
+
+h = (t // 3600) % 24
+m1 = t // 60 % 60 // 10
+m2 = t // 60 % 60 % 10
+s1 = t % 60 // 10
+s2 = t % 10
+
+print(h, ":", m1, m2, ":", s1, s2, sep="")
+
+
+-----------------------------------------------------------------
+

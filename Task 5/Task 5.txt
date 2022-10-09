@@ -1,0 +1,136 @@
+# Exercise 6: Tax and Tip
+
+cost = int(input("Cost of your meal in tenge: "))
+tip = cost * 0.18
+tax = cost * 0.3
+print(f"Tip will be {round(tip, 2)} tg and tax will be {round(tax, 2)} tg")
+print(f"Total amount is {round(cost+tip+tax,2)}")
+
+
+==========================================================================================
+
+# Exercise 9: Compound Interest
+
+money = int(input("How much money do you want to put in bank: "))
+print(f"After 1 year you'll have {round(money * 1.04, 2)}")
+print(f"After 2 year you'll have {round(money * 1.0816, 2)}")
+print(f"After 3 year you'll have {round(money * 1.124864, 2)}")
+
+
+==========================================================================================
+
+# Exercise 11: Fuel Efﬁciency
+
+mpg = int(input("Enter MPG: "))
+print(f"{mpg} MPG will be {round(mpg*235.21, 2)} L/100km")
+
+
+==========================================================================================
+
+# Exercise 12: Distance Between Two Points on Earth
+
+import math
+
+t1, g1, t2, g2 = map(int, input("Enter t1, g1, t2, g2: ").split())
+
+t1, g1, t2, g2 = (
+    t1 * 180 / math.pi,
+    g1 * 180 / math.pi,
+    t2 * 180 / math.pi,
+    g2 * 180 / math.pi,
+)
+
+distance = 6371.01 * (
+    math.acos(
+        math.sin(t1) * math.sin(t2) + math.cos(t1) * math.cos(t2) * math.cos(g1 - g2)
+    )
+)
+
+print("Distance = ", int(distance), sep=" ")
+
+
+==========================================================================================
+
+# Exercise 13: Making Change
+
+print("Coffee machine can take only 5, 10, 20, 50, 100 tenge coins")
+entered = int(input("How much you entered: "))
+cost = int(input("how much is your drink worth? "))
+
+print(f"Your change are {entered - cost}")
+
+
+==========================================================================================
+
+# Exercise 19: Free Fall
+
+h = int(input("Enter height: "))
+g = 9.8
+print("Velocity =", 2 * h * g, "km/h", sep=" ")
+
+
+==========================================================================================
+
+# Exercise 23: Area of a Regular Polygon
+
+import math
+
+n, s = map(int, input("Enter n and S: ").split())
+area = n * ((s ** 2) / 4 * (math.tan(math.pi / n)))
+print("Area =", round(area, 2), "cm^2", sep=" ")
+
+
+==========================================================================================
+
+# Exercise 24: Units of Time
+
+d = int(input("Day: "))
+h = int(input("Hours: "))
+m = int(input("Minutes: "))
+s = int(input("Seconds: "))
+
+total = s + (m * 60) + (h * 3600) + (d * 24 * 60 * 60)
+
+print("Total time in seconds:", int(total), "sec", sep=" ")
+
+
+==========================================================================================
+
+# Exercise 25: Units of Time (Again)
+
+t = int(input("Seconds: "))
+
+h = (t // 3600) % 24
+m1 = t // 60 % 60 // 10
+m2 = t // 60 % 60 % 10
+s1 = t % 60 // 10
+s2 = t % 10
+
+print("Time is: ", end="")
+print(h, ":", m1, m2, ":", s1, s2, sep="")
+
+
+==========================================================================================
+
+# Exercise 27: Body Mass Index
+
+h, w = map(int, input("Enter height and weight in cm and kilo: "))
+BMI = w / (h ** 2)
+print(f"BMI = {BMI}")
+
+
+==========================================================================================
+
+# Exercise 28: Wind Chill
+
+t, v = map(int, input("Enter temperature and velocity of wind: ").split())
+
+if t <= 10 and v > 4.8:
+    WCI = 13.12 + 0.6215 * t - 11.37 * (v ** 0.16) + 0.3965 * t * (v ** 0.16)
+    print("WCI =", int(WCI), sep=" ")
+else:
+    print("Input isn't correct D:")
+
+
+==========================================================================================
+
